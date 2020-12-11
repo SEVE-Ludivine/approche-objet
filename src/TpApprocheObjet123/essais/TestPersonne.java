@@ -1,7 +1,7 @@
-package TpApprocheObjet.essais.essais;
+package TpApprocheObjet123.essais;
 
-import TpApprocheObjet.essais.entites.AdressePostale;
-import TpApprocheObjet.essais.entites.Personne;
+import TpApprocheObjet123.entites.AdressePostale;
+import TpApprocheObjet123.entites.Personne;
 
 public class TestPersonne {
     public static void main(String[] args) {

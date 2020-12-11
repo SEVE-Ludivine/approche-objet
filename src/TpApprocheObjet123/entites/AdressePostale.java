@@ -1,4 +1,4 @@
-package TpApprocheObjet.essais.entites;
+package TpApprocheObjet123.entites;
 
 public class AdressePostale {
     public int numeroRue;
