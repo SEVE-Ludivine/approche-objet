@@ -1,6 +1,6 @@
-package essais;
+package TpApprocheObjet.essais.essais;
 
-import entites.AdressePostale;
+import TpApprocheObjet.essais.entites.AdressePostale;
 
 public class TestAdressePostale {
     public static void main(String[] args) {
