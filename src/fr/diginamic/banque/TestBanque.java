@@ -1,6 +1,7 @@
 package fr.diginamic.banque;
 
 import fr.diginamic.banque.entites.Compte;
+import fr.diginamic.banque.entites.CompteTaux;
 
 import java.util.Arrays;
 
@@ -11,8 +12,13 @@ public class TestBanque {
 
         System.out.println(c1.toString());
         //Creer un tableau de compte TP3 HERITAGE ET CONTRUCTEURS
+        CompteTaux[] comptes = new CompteTaux[2];
+        comptes[0] = new CompteTaux(21352,23.9);
+        comptes[1] = new CompteTaux(21384,154.5, 2.5);
 
-
+        for (CompteTaux ct:comptes) {
+            System.out.println(ct.toString());
+        }
 
     }
 }

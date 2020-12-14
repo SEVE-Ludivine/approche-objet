@@ -7,6 +7,9 @@ public class CompteTaux extends Compte{
         super(numeroCompte, soldeCompte);
         this.tauxRemuneration = tauxRemuneration;
     }
+    public CompteTaux(int numeroCompte, double soldeCompte) {
+        super(numeroCompte, soldeCompte);
+    }
 
     @Override
     public String toString() {
