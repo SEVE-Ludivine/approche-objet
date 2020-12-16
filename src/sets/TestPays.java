@@ -2,8 +2,10 @@ package sets;
 
 import listes.Villes;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 
 public class TestPays {
     public static void main(String[] args) {
@@ -53,6 +55,25 @@ public class TestPays {
         System.out.println("Liste des PAYS finaux");
         for (Pays p:hs) {
             System.out.println(p.nom +" "+p.nbHabitants + " "+ (p.pibHabitants/p.nbHabitants));
+        }
+
+        System.out.println("------------------------------------------------");
+        List<Pays> listPays = new ArrayList<>();
+        listPays.add(new Pays("Usa", 331002651, 20023.14));
+        listPays.add(new Pays("Allemagne", 83783942, 4356.35));
+        listPays.add(new Pays("France", 65273511, 2962.80));
+        listPays.add(new Pays("Uk", 67886011, 3037.79));
+        listPays.add(new Pays("Italie", 60461826, 2397.40));
+        listPays.add(new Pays("Japon", 126476461, 5594.45));
+        listPays.add(new Pays("Chine", 1439323776, 25270.07));
+        listPays.add(new Pays("Russie", 145934462, 4213.40));
+        listPays.add(new Pays("Inde", 1380004385, 10505.29));
+        //Collections.sort(listPays);//TRIE
+
+        //Collections.sort(listPays, new ComparatorHabitants());
+        Collections.sort(listPays, new ComparatorPibHabitant());
+        for (Pays p:listPays) {
+            System.out.println(p.nom +" "+p.nbHabitants + " "+ p.pibHabitants);
         }
     }
 }

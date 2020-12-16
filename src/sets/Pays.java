@@ -1,9 +1,9 @@
 package sets;
 
-public class Pays {
+public class Pays implements Comparable<Pays>{
     String nom;
-    int nbHabitants;
-    double pibHabitants;
+    Integer nbHabitants;
+    Double pibHabitants;
 
     public Pays(String nom, int nbHabitants, double pibHabitants) {
         this.nom = nom;
@@ -19,19 +19,9 @@ public class Pays {
         this.nom = nom;
     }
 
-    public int getNbHabitants() {
-        return nbHabitants;
-    }
-
-    public void setNbHabitants(int nbHabitants) {
-        this.nbHabitants = nbHabitants;
-    }
-
-    public double getPibHabitants() {
-        return pibHabitants;
-    }
-
-    public void setPibHabitants(double pibHabitants) {
-        this.pibHabitants = pibHabitants;
+    @Override
+    public int compareTo(Pays o) {
+        int result = this.pibHabitants.compareTo(o.pibHabitants);
+        return result;
     }
 }

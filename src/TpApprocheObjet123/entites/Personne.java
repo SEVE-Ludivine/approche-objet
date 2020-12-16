@@ -19,6 +19,20 @@ public class Personne {
         System.out.println(this.nom.toUpperCase() + " " + this.prenom);
     }
 
+    //on peut surcharger une méthode
+    // Mais il faut que chaque méthode n'ai pas le même nombre de parametre
+    //Le type de méthode n'est pas une différence suffisante
+    public void m(int a){
+
+    }
+    public void m (int a, int b){
+
+    }
+    /*
+    public int m(int a){
+        return 0;
+    }*/
+
     public void setNom(String nom) {
         this.nom = nom;
     }
@@ -41,5 +55,14 @@ public class Personne {
 
     public AdressePostale getAdresse() {
         return adresse;
+    }
+
+    @Override
+    public String toString() {
+        return "Personne{" +
+                "nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", adresse=" + adresse +
+                '}';
     }
 }
